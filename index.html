@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/png">
+    <title>Jokenpô</title>
+</head>
+<body>
+    <main class="container">
+        <h1>JokenPô</h1>
+        <div id="game-options">
+            <button id="rock" onclick="userPlay('rock')">&#x1F44A;&#x1F3FD;</button>
+            <button id="paper" onclick="userPlay('paper')">&#x1F590;&#x1F3FD;</button>
+            <button id="scissors" onclick="userPlay('scissors')">&#x270C;&#x1F3FD;</button>
+        </div>
+        <div class="result-area">
+
+            <h2>Resultados</h2>
+            
+            <div class="results">
+                <div class="play-values"></div>
+                <p class="result"></p>
+            </div>
+            <div class="scoreboard">
+                <p>Sua pontuação</p>
+                <span id="user-score">0</span>
+                <p>Computador</p>
+                <span id="computer-score">0</span>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
