@@ -19,17 +19,41 @@ const computerPlay = () => {
 }
 
 const startGame = (user, computer) => {
-    play_values.innerHTML = "&#x1F464;" + user + "&#x1F4BB;" + computer
+
+    play_values.innerHTML = `
+        <div>
+            <img src="img/user.png">
+            ${translateChoice(user)}
+        </div>
+        <div class="versus">
+            X
+        </div>
+        <div>
+            <img src="img/computer.png">
+            ${translateChoice(computer)}
+        </div>
+    `
 
     if (user == computer) {
-        result.innerHTML = "Empate! <div>&#x1F440;</div>"
+        result.innerHTML = "<p>Empate!</p> <div>&#x1F440;</div>"
     } else if ((user == "rock" && computer == "scissors") || (user == "paper" && computer == "rock") || (user == "scissors" && computer == "paper")) {
         user_score_value++
         user_score.innerHTML = user_score_value
-        result.innerHTML = "Você ganhou! <div>&#x1F60E;</div>"
+        result.innerHTML = "<p>Você ganhou!</p> <div>&#x1F60E;</div>"
     } else {
         computer_score_value++
         computer_score.innerHTML = computer_score_value
-        result.innerHTML = "Você perdeu! <div>&#x1F611;</div>"
+        result.innerHTML = "<p>Você perdeu!</p> <div>&#x1F611;</div>"
     }
+}
+
+function translateChoice(choice) {
+    if (choice == "rock") {
+        choice = "Pedra"
+    } else if (choice == "paper") {
+        choice = "Papel"
+    } else {
+        choice = "Tesoura"
+    }
+    return choice
 }

@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Press Start 2P", system-ui;
-    font-size: 14px;
+    font-size: 12px;
     background: #010102 url("https://picsum.photos/1600/900");
     background-size: cover;
     background-position: center center;
@@ -23,7 +23,7 @@ body {
     height: 640px;
     min-width: 400px;
     margin: auto;
-    padding: 40px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,24 +33,28 @@ body {
 }
 
 .container h1 {
+    width: 100%;
     padding: 22px 40px;
-    color: #FAD801;
-    font-size: 2.2em;
+    color: #fad801;
+    text-align: center;
     text-shadow: 2px 2px 2px #6b6bf2;
-    border: 2px solid #FAD801;
+    letter-spacing: .1em;
+    border: 2px solid #fad801;
     border-radius: 10px;
 }
 
 #game-options {
     width: 100%;
-    margin: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
     user-select: none;
-    text-align: center;
 }
 
 button {
-    font-size: 64px;
-    background-color: #2F2A26;
+    padding: 8px;
+    font-size: 48px;
+    background-color: #2f2a26;
     border: none;
     border-radius: 10px;
     transition: all .2s;
@@ -58,11 +62,11 @@ button {
 }
 
 button:hover {
-    filter: grayscale(50%);
+    filter: grayscale(70%);
 }
 
 button:active {
-    filter: grayscale(80%);
+    filter: grayscale(100%);
 }
 
 #rock {
@@ -70,14 +74,10 @@ button:active {
 }
 
 #paper {
-    background-color: #00C7F7;
+    background-color: #00c7f7;
 }
 #scissors {
-    background-color: blueviolet;
-}
-
-.play-values {
-    color: #FAD801;
+    background-color: #b3e65b;
 }
 
 #user-score {
@@ -85,20 +85,21 @@ button:active {
 }
 
 #computer-score {
-    color: #F70000;
+    color: #f55f0d;
 }
 
 .result-area {
     width: 100%;
-    padding: 10px;
+    padding: 20px 10px;
     background-color: #2e4053;
     text-align: center;
 }
 
 .result-area h2 {
-    font-size: 1em;
-    margin: 20px 0;
-    color: orange;
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #6cadf8;
+    letter-spacing: .2em;
 }
 
 .results {
@@ -107,17 +108,49 @@ button:active {
     display: none;
 }
 
-.results {
-    margin: 15px 0;
+.play-values {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    color: #fad801;
+    font-size: .8em;
+    border: 1px solid #636060;
+    border-radius: 10px;
+}
+
+
+.play-values div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.play-values div p {
+    font-size: 2.5em;
+}
+
+.play-values div img {
+    width: 48px;
+}
+
+.play-values .versus {
+    color: #c5bfbf;
+}
+
+.result {
+    margin: 10px;
 }
 
 .result div {
-    margin: 10px 0;
+    margin-top: 10px;
     font-size: 2em;
 }
 
 .scoreboard {
-    margin: 20px 0;
+    margin-top: 20px;
     padding: 10px;
     background-color: #283747;
 }
